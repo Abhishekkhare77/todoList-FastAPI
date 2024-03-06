@@ -6,7 +6,18 @@ from routes import router as list_router
 
 config = dotenv_values(".env")
 
-app = FastAPI()
+app = FastAPI(
+    title="Todo List API",
+    description="A simple Todo List API using FastAPI and MongoDB",
+    version="0.1.0",
+    redoc_url=None,
+    docs_url="/",
+    openapi_url="/openapi.json",
+    contact={
+        "name": "Abhishek khare",
+        "url": "https://github.com/Abhishekkhare77"
+    }
+)
 
 allowed_origins = ["*"]
 
